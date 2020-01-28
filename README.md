@@ -4,8 +4,9 @@
 Supported:
 
 - [x] Plain SFC
-- [x] Styled (via `styled-component`)
-- [x] Routed (via `react-router-dom`)
+- [x] `--styled`: Styled Components
+- [x] `--routed`: React Router
+- [x] `--feather`: Feather Icons
 
 All options can be mixed and combined.
 
@@ -16,10 +17,10 @@ Usage:
 sfc --help
 
 # scaffold styled sfc with routing
-sfc styled routed
+sfc styled --routed
 ```
 
-Example output for `sfc styled routed`:
+Example output for `sfc styled --routed`:
 ```jsx
 import {React} from 'react';
 import styled from 'styled-components';

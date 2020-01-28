@@ -10,13 +10,13 @@ use std::cmp::Ordering;
 #[structopt(name = "sfc", about = "React Scaffold Component.")]
 struct Opt {
 
-    #[structopt(long)]
+    #[structopt(long = "--styled")]
     styled: bool,
 
-    #[structopt(long)]
+    #[structopt(long = "--routed")]
     routed: bool,
 
-    #[structopt(long)]
+    #[structopt(long = "--feather")]
     feather: bool,
 
     #[structopt(long = "--name")]
@@ -39,9 +39,11 @@ fn generate_template(opt: &Opt) -> String {
 fn tpl_gen_imports(opt: &Opt, buf: &mut String) {
     let im_react = "import { React } from 'react';\n";
     let im_styled = "import styled from 'styled-components';\n";
+    let im_feather = "import * as feather from 'react-feather';\n";
     let im_routed = "import {\n  Link,\n  Switch,\n  useRouteMatch,\n} from 'react-router-dom';\n";
     buf.push_str(&im_react);
     if opt.styled { buf.push_str(&im_styled); }
+    if opt.feather { buf.push_str(&im_feather); }
     if opt.routed { buf.push_str(&im_routed); }
     buf.push('\n');
 }
