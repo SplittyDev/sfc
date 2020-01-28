@@ -32,6 +32,6 @@ const MyComponent = ({className}) => {
 };
 
 export default styled(MyComponent)`
-    // Your style goes here
+    /* Your style goes here */
 `;
 ```
