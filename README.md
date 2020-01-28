@@ -1,7 +1,5 @@
 # react-scaffold-component
-> Easy scaffolding of React SFCs.
-
-RSC can easily create your stateless function component.
+> Easy scaffolding of stateless function components.
 
 Supported:
 
