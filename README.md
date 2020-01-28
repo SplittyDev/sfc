@@ -6,8 +6,8 @@ RSC can easily create your stateless function component.
 Supported:
 
 - [ ] Plain SFC
-- [ ] Styled (`styled-component`)
-- [ ] Routed (`react-router`)
+- [ ] Styled (via `styled-component`)
+- [ ] Routed (via `react-router-dom`)
 
 Ideally, all options should allow for arbitrary combination.
 
