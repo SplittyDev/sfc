@@ -12,7 +12,7 @@ Supported:
 Ideally, all options should allow for arbitrary combination.
 
 For example, sfc+styled+routed:
-```js
+```jsx
 import {React} from 'react';
 import styled from 'styled-component';
 import {
