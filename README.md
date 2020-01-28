@@ -1,4 +1,4 @@
-# react-scaffold-component
+# stateless-function-component
 > Easy scaffolding of stateless function components.
 
 Supported:
@@ -13,13 +13,13 @@ Usage:
 
 ```bash
 # show all options
-rsc --help
+sfc --help
 
 # scaffold styled sfc with routing
-rsc sfc --styled --routed
+sfc styled routed
 ```
 
-Example output for `rsc sfc --styled --routed`:
+Example output for `sfc styled routed`:
 ```jsx
 import {React} from 'react';
 import styled from 'styled-components';

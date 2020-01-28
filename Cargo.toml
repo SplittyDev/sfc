@@ -1,5 +1,5 @@
 [package]
-name = "rsc"
+name = "sfc"
 version = "0.1.0"
 authors = ["SplittyDev <splittydev@protonmail.com>"]
 edition = "2018"

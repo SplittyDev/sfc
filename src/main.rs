@@ -7,17 +7,17 @@ use structopt_derive::StructOpt;
 use std::cmp::Ordering;
 
 #[derive(StructOpt, Debug)]
-#[structopt(name = "rsc", about = "React Scaffold Component.")]
+#[structopt(name = "sfc", about = "React Scaffold Component.")]
 struct Opt {
 
     #[structopt(long)]
-    sfc: bool,
-
-    #[structopt(long = "--styled")]
     styled: bool,
 
-    #[structopt(long = "--routed")]
+    #[structopt(long)]
     routed: bool,
+
+    #[structopt(long)]
+    feather: bool,
 
     #[structopt(long = "--name")]
     name: Option<String>,
@@ -40,7 +40,7 @@ fn tpl_gen_imports(opt: &Opt, buf: &mut String) {
     let im_react = "import { React } from 'react';\n";
     let im_styled = "import styled from 'styled-components';\n";
     let im_routed = "import {\n  Link,\n  Switch,\n  useRouteMatch,\n} from 'react-router-dom';\n";
-    if opt.sfc { buf.push_str(&im_react); }
+    buf.push_str(&im_react);
     if opt.styled { buf.push_str(&im_styled); }
     if opt.routed { buf.push_str(&im_routed); }
     buf.push('\n');
