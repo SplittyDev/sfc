@@ -5,16 +5,26 @@ RSC can easily create your stateless function component.
 
 Supported:
 
-- [ ] Plain SFC
-- [ ] Styled (via `styled-component`)
-- [ ] Routed (via `react-router-dom`)
+- [x] Plain SFC
+- [x] Styled (via `styled-component`)
+- [x] Routed (via `react-router-dom`)
 
-Ideally, all options should allow for arbitrary combination.
+All options can be mixed and combined.
 
-For example, sfc+styled+routed:
+Usage:
+
+```bash
+# show all options
+rsc --help
+
+# scaffold styled sfc with routing
+rsc sfc --styled --routed
+```
+
+Example output for `rsc sfc --styled --routed`:
 ```jsx
 import {React} from 'react';
-import styled from 'styled-component';
+import styled from 'styled-components';
 import {
     Link,
     Switch,
@@ -26,12 +36,9 @@ const MyComponent = ({className}) => {
 
     return (
         <div className={className}>
-            {/* Your code goes here */}
         </div>
     );
 };
 
-export default styled(MyComponent)`
-    /* Your style goes here */
-`;
+export default styled(MyComponent)``;
 ```
