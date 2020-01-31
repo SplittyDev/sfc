@@ -37,7 +37,7 @@ fn generate_template(opt: &Opt) -> String {
 }
 
 fn tpl_gen_imports(opt: &Opt, buf: &mut String) {
-    let im_react = "import { React } from 'react';\n";
+    let im_react = "import React from 'react';\n";
     let im_styled = "import styled from 'styled-components';\n";
     let im_feather = "import * as feather from 'react-feather';\n";
     let im_routed = "import {\n  Link,\n  Switch,\n  useRouteMatch,\n} from 'react-router-dom';\n";

@@ -22,7 +22,7 @@ sfc --styled --routed
 
 Example output for `sfc --styled --routed`:
 ```jsx
-import {React} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import {
     Link,
