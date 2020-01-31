@@ -7,6 +7,7 @@ Supported:
 - [x] `--styled`: Styled Components
 - [x] `--routed`: React Router
 - [x] `--feather`: Feather Icons
+- [x] `--children`: Nested Components
 
 All options can be mixed and combined.
 

@@ -19,6 +19,9 @@ struct Opt {
     #[structopt(long = "--feather")]
     feather: bool,
 
+    #[structopt(long = "--children")]
+    children: bool,
+
     #[structopt(long = "--name")]
     name: Option<String>,
 }
@@ -67,6 +70,7 @@ fn tpl_gen_export(opt: &Opt, buf: &mut String) {
 fn tplh_gen_component_args(opt: &Opt) -> String {
     let mut args: Vec<&str> = Vec::new();
     if opt.styled { args.push("className") };
+    if opt.children { args.push("children") };
     args.join(", ")
 }
 
@@ -83,8 +87,9 @@ fn tplh_gen_component_body(opt: &Opt) -> String {
 fn tplh_gen_component_body_jsx(opt: &Opt) -> String {
     let mut buf = String::new();
     buf.push_str(&format!(
-        "return (\n<div{args}>\n</div>\n)",
+        "return (\n<div{args}>\n{extend_children}</div>\n)",
         args = tplh_gen_component_body_jsx_element_args(&opt),
+        extend_children = if opt.children { "{children}\n" } else { "" },
     ));
     buf.lines().map(|s| format!("{}", s)).collect::<Vec<String>>().join("\n")
 }
